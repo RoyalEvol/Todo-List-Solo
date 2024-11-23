@@ -35,5 +35,4 @@ li {
     /* HTML Link Element */
 <link           /* Opening tag */
 rel="stylesheet"  /* Relation attribute - defines relationship */
-href="style.css"  /* Reference to CSS file location */
->               /* Closing bracket */
+
