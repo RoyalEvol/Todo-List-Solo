@@ -1,31 +1,74 @@
-<h color="blue">&lt;!DOCTYPE html&gt;</h>
-<h color="blue">&lt;html lang="en"&gt;</h>
-<h color="purple">&lt;head&gt;</h>
-    <h color="blue">&lt;meta charset="UTF-8"&gt;</h>
-    <h color="blue">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</h>
-    <h color="blue">&lt;title&gt;</h>To-Do List<h color="blue">&lt;/title&gt;</h>
-<h color="purple">&lt;/head&gt;</h>
-<h color="purple">&lt;body&gt;</h>
-    <h color="blue">&lt;h1&gt;</h>To-Do List<h color="blue">&lt;/h1&gt;</h>
-    <h color="blue">&lt;input type="text" id="taskInput" placeholder="Add a new task"&gt;</h>
-    <h color="blue">&lt;button onclick="addTask()"&gt;</h>Add<h color="blue">&lt;/button&gt;</h>
-    <h color="blue">&lt;ul id="taskList"&gt;&lt;/ul&gt;</h>
-    <h color="purple">&lt;script&gt;</h>
-        <h color="green">function</h> <h color="orange">addTask()</h> {
-            <h color="green">const</h> taskInput = document.<h color="orange">getElementById</h>("taskInput");
-            <h color="green">const</h> taskList = document.<h color="orange">getElementById</h>("taskList");
-
-            <h color="green">if</h> (taskInput.value === "") {
-                <h color="orange">alert</h>("Please enter a task!");
-                <h color="green">return</h>;
-            }
-
-            <h color="green">const</h> newTask = document.<h color="orange">createElement</h>("li");
-            newTask.textContent = taskInput.value;
-            taskList.<h color="orange">appendChild</h>(newTask);
-
-            taskInput.value = ""; <h color="gray">// Clear input after adding the task</h>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
         }
-    <h color="purple">&lt;/script&gt;</h>
-<h color="purple">&lt;/body&gt;</h>
-<h color="blue">&lt;/html&gt;</h>
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            background: #555;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Webpage</h1>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>This is a paragraph about me. You can write anything here.</p>
+        </section>
+        <section id="services">
+            <h2>Services</h2>
+            <p>Here are some of the services I offer.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>You can contact me via email at: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Webpage. All rights reserved.</p>
+    </footer>
+</body>
+</html>
