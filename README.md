@@ -1,1 +1,32 @@
 # Todo-List-Solo
+<h color="blue">&lt;!DOCTYPE html&gt;</h>
+<h color="blue">&lt;html lang="en"&gt;</h>
+<h color="purple">&lt;head&gt;</h>
+    <h color="blue">&lt;meta charset="UTF-8"&gt;</h>
+    <h color="blue">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</h>
+    <h color="blue">&lt;title&gt;</h>To-Do List<h color="blue">&lt;/title&gt;</h>
+<h color="purple">&lt;/head&gt;</h>
+<h color="purple">&lt;body&gt;</h>
+    <h color="blue">&lt;h1&gt;</h>To-Do List<h color="blue">&lt;/h1&gt;</h>
+    <h color="blue">&lt;input type="text" id="taskInput" placeholder="Add a new task"&gt;</h>
+    <h color="blue">&lt;button onclick="addTask()"&gt;</h>Add<h color="blue">&lt;/button&gt;</h>
+    <h color="blue">&lt;ul id="taskList"&gt;&lt;/ul&gt;</h>
+    <h color="purple">&lt;script&gt;</h>
+        <h color="green">function</h> <h color="orange">addTask()</h> {
+            <h color="green">const</h> taskInput = document.<h color="orange">getElementById</h>("taskInput");
+            <h color="green">const</h> taskList = document.<h color="orange">getElementById</h>("taskList");
+
+            <h color="green">if</h> (taskInput.value === "") {
+                <h color="orange">alert</h>("Please enter a task!");
+                <h color="green">return</h>;
+            }
+
+            <h color="green">const</h> newTask = document.<h color="orange">createElement</h>("li");
+            newTask.textContent = taskInput.value;
+            taskList.<h color="orange">appendChild</h>(newTask);
+
+            taskInput.value = ""; <h color="gray">// Clear input after adding the task</h>
+        }
+    <h color="purple">&lt;/script&gt;</h>
+<h color="purple">&lt;/body&gt;</h>
+<h color="blue">&lt;/html&gt;</h>
