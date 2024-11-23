@@ -31,3 +31,4 @@ ul {
 li {
     margin: 10px 0;
 }
+<link rel="stylesheet" href="style.css">
